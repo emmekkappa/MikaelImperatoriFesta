@@ -139,7 +139,7 @@ li {
 }
 /*HERO*/
 #hero {
-	background-image: url("https://emmekkappa.github.io/MyWebsite/hero-background.svg");
+	background-image: url("https://emmekkappa.github.io/MyWebsite/img/hero-background.svg");
 	background-color: white;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -221,7 +221,7 @@ li {
 }
 #amworld, #amworld-hero {
 	background-image:
-		linear-gradient(rgba(162, 42, 39, 0.8), rgba(162, 42, 39, 0.8)), linear-gradient(rgba(162, 42, 39, 0.7), rgba(162, 42, 39, 0.7)), url("https://emmekkappa.github.io/MyWebsite/amworld.jpg");
+		linear-gradient(rgba(162, 42, 39, 0.8), rgba(162, 42, 39, 0.8)), linear-gradient(rgba(162, 42, 39, 0.7), rgba(162, 42, 39, 0.7)), url("https://emmekkappa.github.io/MyWebsite/img/amworld.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-blend-mode: color, normal;
@@ -231,7 +231,7 @@ li {
 }
 #aether, #aether-hero {
 	background-image:
-		linear-gradient(rgba(74, 76, 75, 0.8), rgba(74, 76, 75, 0.8)), linear-gradient(rgba(74, 76, 75, 0.9), rgba(74, 76, 75, 0.9)), url("https://emmekkappa.github.io/MyWebsite/The-National-Theatre-69.jpg");
+		linear-gradient(rgba(74, 76, 75, 0.8), rgba(74, 76, 75, 0.8)), linear-gradient(rgba(74, 76, 75, 0.9), rgba(74, 76, 75, 0.9)), url("https://emmekkappa.github.io/MyWebsite/img/The-National-Theatre-69.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-blend-mode: color, normal;
@@ -243,7 +243,7 @@ li {
 	filter: invert(100%);
 }
 #logos, #logos-hero {
-	background-image: url("https://emmekkappa.github.io/MyWebsite/logos-background.svg");
+	background-image: url("https://emmekkappa.github.io/MyWebsite/img/logos-background.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -300,7 +300,7 @@ li {
 }
 /*NIU*/
 .niu-sketch {
-	background-image: url(https://emmekkappa.github.io/MyWebsite/niu-logo-design.jpg);
+	background-image: url(https://emmekkappa.github.io/MyWebsite/img/niu-logo-design.jpg);
 	height: 480px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -365,7 +365,7 @@ li {
 }
 .niu-website-mockup {
 	height: 500px;
-	background-image: url(https://emmekkappa.github.io/MyWebsite/niu-website-laptop-mockup.jpg);
+	background-image: url(https://emmekkappa.github.io/MyWebsite/img/niu-website-laptop-mockup.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -389,7 +389,7 @@ li {
 }
 .amworld-navigator {
 	height: 720px;
-	background-image: url(https://emmekkappa.github.io/MyWebsite/amworld-navigator-wide.jpg);
+	background-image: url(https://emmekkappa.github.io/MyWebsite/img/amworld-navigator-wide.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -418,7 +418,7 @@ li {
 }
 .amworld-loading-image {
 	background-image:
-		linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), url("https://emmekkappa.github.io/MyWebsite/amworld-loading.jpg");
+		linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), url("https://emmekkappa.github.io/MyWebsite/img/amworld-loading.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -429,7 +429,7 @@ li {
 }
 .amworld-mgmt-image {
 	background-image:
-		linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), url("https://emmekkappa.github.io/MyWebsite/amworld-task-mgmt.jpg");
+		linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), url("https://emmekkappa.github.io/MyWebsite/img/amworld-task-mgmt.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -440,7 +440,7 @@ li {
 }
 .amworld-scanning-image {
 	background-image:
-		linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), url("https://emmekkappa.github.io/MyWebsite/amworld-scanning.jpg");
+		linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), url("https://emmekkappa.github.io/MyWebsite/img/amworld-scanning.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -451,7 +451,7 @@ li {
 }
 .amworld-POD-image {
 	background-image:
-		linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), url("https://emmekkappa.github.io/MyWebsite/amworld-signing.jpg");
+		linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), url("https://emmekkappa.github.io/MyWebsite/img/amworld-signing.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -503,7 +503,7 @@ li {
 
 /*ABOUT*/
 #about {
-	background-image: url("https://emmekkappa.github.io/MyWebsite/hero-background.svg");
+	background-image: url("https://emmekkappa.github.io/MyWebsite/img/hero-background.svg");
 	background-blend-mode: multiply;
 	background-color: #410099;
 	background-repeat: no-repeat;
