@@ -54,34 +54,6 @@ $('.slider-icon').slick({
 	focusOnSelect: true
 });
 
-// Scrollify applied to homepage only
-/*jQuery(document).ready(function($) {
-  if($('section.homepage').length) {
-
-    $.scrollify({ 
-      section : ".homepage",
-      sectionName: "section-name",
-      interstitialSection: "",
-      easing: "easeOutExpo",
-      scrollSpeed: 1100,
-      offset: 0,
-      scrollbars: true,
-      target: "html,body",
-      standardScrollElements: false,
-      setHeights: true,
-      overflowScroll: true,
-      updateHash: true,
-      touchScroll: true,
-      before:function() {},
-      after:function() {},
-      afterResize:function() {},
-      afterRender:function() {},
-    });
-
-  } 
-});*/
-
-
 // Scrollify applied to homepage only through classes
 $(function () {
 	$.scrollify({
@@ -167,32 +139,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Sliding underline nav
 
-$(function() {
+const menu = document.querySelector(".navbar-nav");
+menu.addEventListener('mouseover', (event) => {
+  if (event.target.classList.contains("nav-link")) {
+    menu.style.setProperty(
+      "--underline-width",
+      `${event.target.offsetWidth}px`
+    );
+    menu.style.setProperty(
+      "--underline-offset-x",
+      `${event.target.offsetLeft}px`
+    );
+  }
+});
 
-    var $el, leftPos, newWidth,
-        $mainNav = $("#MyNavBar");
+menu.addEventListener("mouseleave", () =>
+  menu.style.setProperty("--underline-width", "0")
+);
 
-    $mainNav.append("<li id='magic-line'></li>");
-    var $magicLine = $("#magic-line");
-
-    $magicLine
-        .width($(".active").width())
-        .css("left", $(".active a").position().left)
-        .data("origLeft", $magicLine.position().left)
-        .data("origWidth", $magicLine.width());
-
-    $("#MyNavBar li a").hover(function() {
-        $el = $(this);
-        leftPos = $el.position().left;
-        newWidth = $el.parent().width();
-        $magicLine.stop().animate({
-            left: leftPos,
-            width: newWidth
-        });
-    }, function() {
-        $magicLine.stop().animate({
-            left: $magicLine.data("origLeft"),
-            width: $magicLine.data("origWidth")
-        });    
-    });
+$( '#MyNav .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
 });
