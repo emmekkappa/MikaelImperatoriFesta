@@ -1,490 +1,324 @@
-@charset "UTF-8";
-body {
-	font-family: "Brother 1816";
-	background-color: white;
-	position: relative;
-	overflow-x: hidden;
-}
-/*SCROLL*/
-.scroll a {
-	position: absolute;
-	left: 50%;
-}
-.scroll a.text-white {
-	bottom: 0;
-}
-.scroll h6 {
-	margin-top: -60px;
-}
-.scroll a span {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 46px;
-	height: 46px;
-	margin-left: -23px;
-	border: 1px solid transparent;
-	border-radius: 100%;
-	box-sizing: border-box;
-}
-.scroll a span::after {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	content: '';
-	width: 20px;
-	height: 20px;
-	margin: -22px 0 0 -10px;
-	border-left: 1px solid #212529;
-	border-bottom: 1px solid #212529;
-	-webkit-transform: rotate(-45deg) skew(-15deg, -15deg);
-	transform: rotate(-45deg) skew(-15deg, -15deg);
-	box-sizing: border-box;
-}
-.scroll a.text-white span::after {
-	border-left: 1px solid white;
-	border-bottom: 1px solid white;
-}
-/*NAVIGATION*/
-#mikael-imperatori-festa-logo {
-	width: 240px;
-}
-#MyNav.dark {
-	filter: brightness(0) invert(1);
-}
-#MyNav.light {
-	filter: none;
-}
-#MyNavBar.nav-link {
-	color: #1d1d1b !important;
-	opacity: 0.7;
-}
-#MyNavBar.nav-item.active {
-	font-weight: bold !important;
-}
-#MyNavBar.nav-link.active {
-	color: #1d1d1b !important;
-	font-weight: 700 !important;
-	opacity: 1.0;
-}
-.homepage-icon {
-	width: 36px !important;
-}
-.back-icon {
-	width: 36px !important;
-	bottom: 48px;
-	right: 24px;
-	position: fixed;
-	z-index: 999999;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
-}
-.tooltip-inner {
-	background-color: transparent;
-	font-family: "Brother 1816";
-	font-size: 9px;
-	font-weight: 700;
-	text-transform: uppercase;
-	padding-left: 2px !important;
-	padding-right: 2px !important;
-}
-.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
-	border-top-color: transparent !important;
-}
-/*SLIDING UNDERLINE*/
-.navbar-nav {
-	--underline-width: 0; /* initial width */
-	--underline-offset-x: 0; /* initial position */
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-@media only screen and (min-width : 768px) {
-	.navbar-nav::before {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 100%;
-		height: 2px;
-		width: var(--underline-width);
-		transform: translateX(var(--underline-offset-x));
-		background-color: #1d1d1b !important;
-		transition: transform 0.5s, width 0.5s;
-	}
-}
-/*HERO*/
-#hero {
-	background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/hero-background.svg");
-	background-color: white;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: right bottom;
-	background-size: 70%;
-	height: 100vh;
-}
-#hero h1 {
-	color: #31006f;
-	font-weight: 900;
-	margin-top: -2px;
-	margin-bottom: -2px;
-}
-@media only screen and (min-width: 768px) {
-	#hero h1 {
-		margin-top: -10px;
-		margin-bottom: -10px;
-	}
-}
-/*HERO SLIDE*/
-.slick-slide {
-	transition: 0.25s ease;
-	transition-delay: 0.125s;
-	paddin-top: 0;
-	padding-bottom: 0;
-}
-@media only screen and (min-width: 768px) {
-	.slick-slide {
-		paddin-top: 5px;
-		padding-bottom: 5px;
-	}
-}
-.slick-current {
-	transition: 0.25s ease;
-	transition-delay: 0.125s;
-}
-.slick-slide:not(.slick-current) {
-	color: black !important;
-	font-weight: 300 !important;
-}
-.slick-list {
-	padding: 0 0 10px 0 !important;
-}
-@media only screen and (min-width: 768px) {
-	.slick-list {
-		padding: 0 !important;
-	}
-}
-.slider-icon {
-	width: 30%;
-}
-@media only screen and (max-width: 767px) {
-	.slider-icon {
-		margin-top: 2px !important;
-	}
-}
-@media only screen and (min-width: 768px) {
-	.slider-icon {
-		width: 25%;
-	}
-}
-/*WORK*/
-@media only screen and (max-width: 767px) {
-	.work-list h2:last-child {
-		font-size: 1.3rem !important;
-	}
-	.work-list h2:not(:last-child) {
-		font-size: 3.5rem !important;
-		text-align: center !important;
-		overflow-wrap: break-word;
-	}
-}
-#niu, .niu {
-	background-color: black;
-}
-#niu img, .niu img {
-	width: 250px;
-}
-#amworld, #amworld-hero {
-	background-image:
-		linear-gradient(rgba(162, 42, 39, 0.8), rgba(162, 42, 39, 0.8)), linear-gradient(rgba(162, 42, 39, 0.7), rgba(162, 42, 39, 0.7)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: color, normal;
-}
-#amworld img, #amworld-hero img {
-	width: 300px;
-}
-#aether, #aether-hero {
-	background-image:
-		linear-gradient(rgba(74, 76, 75, 0.8), rgba(74, 76, 75, 0.8)), linear-gradient(rgba(74, 76, 75, 0.9), rgba(74, 76, 75, 0.9)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/The-National-Theatre-69.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: color, normal;
-}
-#aether img, #aether-hero img {
-	width: 254px;
-}
-.invert {
-	filter: invert(100%);
-}
-#logos, #logos-hero {
-	background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/logos-background.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.text-responsive {
-	font-size: clamp(3em, 9vw, 6.5em);
-	display: inline-block;
-	white-space: nowrap;
-}
-@media only screen and (min-width: 768px) {
-	.text-responsive {
-		font-size: clamp(2em, 7vw, 6.5em);
-	}
-}
-/*WORK PAGE*/
-.work-page {
-	margin-top: -70px;
-	padding-top: 70px;
-	position: relative;
-	z-index: 10;
-}
-.grey-icon {
-	filter: invert(50%);
-}
-.grey-icon > img {
-	height: 36px;
-	width: 36px;
-}
-.work-typography {
-	max-height: 112px;
-}
-/*MARGINS + PADDING*/
-.mt-150 {
-	margin-top: 150px !important;
-}
-.mb-150 {
-	margin-bottom: 150px !important;
-}
-.my-150 {
-	margin-top: 150px !important;
-	margin-bottom: 150px !important;
-}
-.pt-150 {
-	padding-top: 150px !important;
-}
-.pb-150 {
-	padding-bottom: 150px !important;
-}
-.py-150 {
-	padding-top: 150px !important;
-	padding-bottom: 150px !important;
-}
-.mt-n8rem {
-	margin-top: -8rem !important;
-}
-/*NIU*/
-.niu-sketch {
-	background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/niu-logo-design.jpg);
-	height: 480px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-.niu-construction {
-	height: 480px;
-}
-.niu-construction > img {
-	max-height: 480px;
-}
-.light-grey {
-	background-color: #EFEFEF;
-}
-.niu-colour-palette-wrapper > .row > .col-6 {
-	height: 160px;
-}
-.niu-colour-palette-black, .black-background {
-	background-color: black;
-}
-.niu-colour-palette-green {
-	background-color: #7FB916;
-}
-.niu-colour-palette-blue {
-	background-color: #319DE9;
-}
-.niu-colour-palette-yellow {
-	background-color: #F8B61C;
-}
-.niu-colour-palette-red {
-	background-color: #D50436;
-}
-.wheel-section {
-	transform: translateY(27%);
-	margin-top: -5%;
-}
-@media only screen and (min-width : 768px) {
-	.wheel-section.img-fluid {
-		max-width: 70% !important;
-	}
-}
-.three-wheels {
-	transform: translateY(33%);
-	margin-top: -3%;
-}
-.niu-leaflet-light-grey-black-bkg {
-	background: rgb(213, 213, 213);
-	background: linear-gradient(180deg, rgba(213, 213, 213, 1) 50%, rgba(0, 0, 0, 1) 50%);
-}
-.niu-light-grey-bkg {
-	background-color: #d5d5d5;
-}
-.light-grey-divider {
-	padding-top: 20%;
-	padding-bottom: 20%;
-}
-.niu-leaflet-img {
-	transform: translate(1%, -50%);
-}
-.niu-website-mockup {
-	height: 500px;
-	background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/niu-website-laptop-mockup.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-}
-/*AMWORLD*/
-.amworld-colour-palette-wrapper > .row > div {
-	aspect-ratio: 1;
-}
-.amworld-colour-palette-magenta {
-	background-color: #B33E68;
-}
-.amworld-colour-palette-navy {
-	background-color: #2B334E;
-}
-.amworld-colour-palette-light-blue {
-	background-color: #7E99CE;
-}
-.amworld-colour-palette-purple {
-	background-color: #794682;
-}
-.amworld-navigator {
-	height: 720px;
-	background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-navigator-wide.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-}
-.amworld-icon-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-	gap: 2rem;
-	height: 360px;
-	place-content: space-between;
-}
-.amworld-icon > img {
-	height: 41px;
-	width: 100%;
-}
-.app-features-grid > div > ul {
-	list-style-type: none;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(min(100%, max(384px, 100%/2)), 1fr));
-	grid-auto-rows: 1fr;
-	gap: 0;
-}
-.app-features-grid > div > ul > li {
-	min-height: 500px;
-}
-.amworld-loading-image {
-	background-image:
-		linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-loading.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-blend-mode: color, normal;
-}
-.amworld-loading-text {
-	background: #b33e68;
-}
-.amworld-mgmt-image {
-	background-image:
-		linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-task-mgmt.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-blend-mode: color, normal;
-}
-.amworld-mgmt-text {
-	background: #2b334e;
-}
-.amworld-scanning-image {
-	background-image:
-		linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-scanning.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-blend-mode: color, normal;
-}
-.amworld-scanning-text {
-	background: #7e99ce;
-}
-.amworld-POD-image {
-	background-image:
-		linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-signing.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	background-blend-mode: color, normal;
-}
-.amworld-POD-text {
-	background: #794682;
-}
-/*AETHER*/
-.aether-colour-palette-wrapper > .row > div {
-	aspect-ratio: 1;
-}
-.aether-colour-palette-lilac {
-	background-color: #958497;
-}
-.aether-colour-palette-yellow {
-	background-color: #f8cd1d;
-}
-.aether-colour-palette-green {
-	background-color: #90b3a7;
-}
-.aether-colour-palette-grey {
-	background-color: #8e9193;
-}
-.aether-colour-palette-orange {
-	background-color: #e7882b;
-}
-.aether-colour-palette-blue {
-	background-color: #8ea4b8;
-}
-.shadow-effect {
-	box-shadow: 8px 8px 16px #dddddd;
-}
-/*LOGOS*/
-.qronologer {
-	background-color: #f8b133;
-}
-.aether {
-	background-color: #575756;
-}
-.idrico {
-	background-color: black;
-}
-.rimdrim {
-	background-color: #de902f;
-}
-/*ABOUT*/
-#about {
-	background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/hero-background.svg");
-	background-blend-mode: multiply;
-	background-color: #410099;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: right bottom;
-	background-size: 70%;
-}
-.lead {
-	line-height: 1.75;
-}
-.get-in-touch {
-	color: #31006f;
-}
-.get-in-touch-icon > a > img {
-	height: 36px;
-	width: 36px;
-}
+/* line 3, style.sass */
+html { scroll-behavior: smooth; }
+
+/* line 6, style.sass */
+body { font-family: "Brother 1816"; background-color: white; position: relative; overflow: hidden; }
+
+/*SCROLL */
+/* line 15, style.sass */
+.scroll a { position: absolute; left: 50%; }
+/* line 19, style.sass */
+.scroll a.text-white { bottom: 0; }
+/* line 22, style.sass */
+.scroll h6 { margin-top: -60px; }
+/* line 26, style.sass */
+.scroll a span { position: absolute; bottom: 0; left: 50%; width: 46px; height: 46px; margin-left: -23px; border: 1px solid transparent; border-radius: 100%; box-sizing: border-box; }
+/* line 37, style.sass */
+.scroll a span::after { position: absolute; top: 50%; left: 50%; content: ""; width: 20px; height: 20px; margin: -22px 0 0 -10px; border-left: 1px solid #212529; border-bottom: 1px solid #212529; -webkit-transform: rotate(-45deg) skew(-15deg, -15deg); transform: rotate(-45deg) skew(-15deg, -15deg); box-sizing: border-box; }
+/* line 51, style.sass */
+.scroll a.text-white span::after { border-left: 1px solid white; border-bottom: 1px solid white; }
+
+/*NAVIGATION */
+/* line 57, style.sass */
+#mikael-imperatori-festa-logo { width: 240px; }
+
+/* line 61, style.sass */
+#MyNav.dark { filter: brightness(0) invert(1); }
+/* line 64, style.sass */
+#MyNav.light { filter: none; }
+
+/* line 68, style.sass */
+#MyNavBar.nav-link { color: #1d1d1b !important; opacity: 0.7; }
+/* line 72, style.sass */
+#MyNavBar.nav-item.active { font-weight: bold !important; }
+/* line 75, style.sass */
+#MyNavBar.nav-link.active { color: #1d1d1b !important; font-weight: 700 !important; opacity: 1; }
+
+/* line 80, style.sass */
+.homepage-icon { width: 36px !important; }
+
+/* line 83, style.sass */
+.back-icon { width: 36px !important; bottom: 48px; right: 24px; position: fixed; z-index: 999999; filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3)); }
+
+/* line 91, style.sass */
+.tooltip-inner { background-color: transparent; font-family: "Brother 1816"; font-size: 9px; font-weight: 700; text-transform: uppercase; padding-left: 2px !important; padding-right: 2px !important; }
+
+/* line 100, style.sass */
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before { border-top-color: transparent !important; }
+
+/* line 103, style.sass */
+.navbar-light .navbar-toggler-icon { background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/strawberry.svg"); }
+
+/*SLIDING UNDERLINE */
+/* line 108, style.sass */
+.navbar-nav { --underline-width:0; /* initial width */ --underline-offset-x:0; /* initial position */ position: relative; margin: 0; padding: 0; }
+
+@media only screen and (min-width: 768px) { /* line 120, style.sass */
+  .navbar-nav::before { content: ""; display: block; position: absolute; top: 100%; height: 2px; width: var(--underline-width); transform: translateX(var(--underline-offset-x)); background-color: #1d1d1b !important; transition: transform 0.5s, width 0.5s; } }
+/*HERO */
+/* line 133, style.sass */
+#hero { background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/hero-background.svg"); background-color: white; background-repeat: no-repeat; background-attachment: fixed; background-position: right bottom; background-size: 70%; height: 100vh; }
+/* line 142, style.sass */
+#hero h1 p, #hero div.slider-mobile.h1 p { color: #31006f; font-weight: 900; margin-top: -2px; margin-bottom: -2px; letter-spacing: -2px; }
+
+@media only screen and (min-width: 768px) { /* line 150, style.sass */
+  #hero h1 p { margin-top: -10px; margin-bottom: -10px; } }
+/*HERO SLIDE */
+/* line 156, style.sass */
+.slick-slide { transition: 0.25s ease; transition-delay: 0.125s; paddin-top: 0; padding-bottom: 0; }
+
+@media only screen and (min-width: 768px) { /* line 163, style.sass */
+  .slick-slide { paddin-top: 5px; padding-bottom: 5px; } }
+/* line 167, style.sass */
+.slick-current { transition: 0.25s ease; transition-delay: 0.125s; }
+
+/* line 171, style.sass */
+.slick-slide:not(.slick-current) { color: black !important; font-weight: 300 !important; }
+
+/* line 175, style.sass */
+.slick-list { padding: 0 0 10px 0 !important; }
+
+@media only screen and (min-width: 768px) { /* line 179, style.sass */
+  .slick-list { padding: 0 !important; } }
+/* line 182, style.sass */
+.slider-icon { width: 30%; }
+
+@media only screen and (max-width: 767px) { /* line 186, style.sass */
+  .slider-icon { margin-top: 2px !important; } }
+@media only screen and (min-width: 768px) { /* line 190, style.sass */
+  .slider-icon { width: 25%; } }
+/*WORK */
+@media only screen and (max-width: 767px) { /* line 196, style.sass */
+  .work-list h2:last-child { font-size: 1.3rem !important; }
+  /* line 199, style.sass */
+  .work-list h2:not(:last-child) { font-size: 3.5rem !important; text-align: center !important; overflow-wrap: break-word; } }
+/*SCROLL SNAPPING */
+/* line 206, style.sass */
+.work-list, main.work { scroll-snap-type: y mandatory; height: 100vh; overflow: scroll; }
+
+/* line 211, style.sass */
+.homepage, main.work > article { scroll-snap-align: start; height: 100vh; }
+
+/*END OF SCROLL SNAPPING */
+/* line 217, style.sass */
+#niu, .niu { background-color: black; }
+
+/* line 220, style.sass */
+#niu img, .niu img { width: 250px; }
+
+/* line 223, style.sass */
+#amworld, #amworld-hero { background-image: linear-gradient(rgba(162, 42, 39, 0.8), rgba(162, 42, 39, 0.8)), linear-gradient(rgba(162, 42, 39, 0.7), rgba(162, 42, 39, 0.7)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld.jpg"); background-repeat: no-repeat; background-size: cover; background-blend-mode: color, normal; }
+
+/* line 229, style.sass */
+#amworld img, #amworld-hero img { width: 300px; }
+
+/* line 232, style.sass */
+#aether, #aether-hero { background-image: linear-gradient(rgba(74, 76, 75, 0.8), rgba(74, 76, 75, 0.8)), linear-gradient(rgba(74, 76, 75, 0.9), rgba(74, 76, 75, 0.9)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/The-National-Theatre-69.jpg"); background-repeat: no-repeat; background-size: cover; background-blend-mode: color, normal; }
+
+/* line 238, style.sass */
+#aether img, #aether-hero img { width: 254px; }
+
+/* line 241, style.sass */
+.invert { filter: invert(100%); }
+
+/* line 244, style.sass */
+#logos, #logos-hero { background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/logos-background.svg"); background-repeat: no-repeat; background-size: cover; }
+
+/* line 249, style.sass */
+.text-responsive { font-size: clamp(3rem, 9vw, 6.5rem); display: inline-block; white-space: nowrap; }
+
+@media only screen and (min-width: 768px) { /* line 255, style.sass */
+  .text-responsive { font-size: clamp(2rem, 7vw, 6.5rem); } }
+/*WORK PAGE */
+/* line 260, style.sass */
+.work-page { margin-top: -70px; padding-top: 70px; position: relative; z-index: 10; }
+
+/* line 266, style.sass */
+.grey-icon { filter: invert(50%); }
+/* line 269, style.sass */
+.grey-icon > img { height: 36px; width: 36px; }
+
+/* line 273, style.sass */
+.work-typography { max-height: 112px; }
+
+/*MARGINS + PADDING */
+/* line 278, style.sass */
+.mt-150 { margin-top: 150px !important; }
+
+/* line 281, style.sass */
+.mb-150 { margin-bottom: 150px !important; }
+
+/* line 284, style.sass */
+.my-150 { margin-top: 150px !important; margin-bottom: 150px !important; }
+
+/* line 288, style.sass */
+.pt-150 { padding-top: 150px !important; }
+
+/* line 291, style.sass */
+.pb-150 { padding-bottom: 150px !important; }
+
+/* line 294, style.sass */
+.py-150 { padding-top: 150px !important; padding-bottom: 150px !important; }
+
+/* line 298, style.sass */
+.mt-n8rem { margin-top: -8rem !important; }
+
+/*NIU */
+/* line 303, style.sass */
+.niu-sketch { background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/niu-logo-design.jpg); height: 480px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+/* line 310, style.sass */
+.niu-construction { height: 480px; }
+/* line 313, style.sass */
+.niu-construction > img { max-height: 480px; }
+
+/* line 316, style.sass */
+.light-grey { background-color: #EFEFEF; }
+
+/* line 319, style.sass */
+.niu-colour-palette-wrapper > .row > .col-6 { height: 160px; }
+
+/* line 322, style.sass */
+.niu-colour-palette-black, .black-background { background-color: black; }
+
+/* line 325, style.sass */
+.niu-colour-palette-green { background-color: #7FB916; }
+
+/* line 328, style.sass */
+.niu-colour-palette-blue { background-color: #319DE9; }
+
+/* line 331, style.sass */
+.niu-colour-palette-yellow { background-color: #F8B61C; }
+
+/* line 334, style.sass */
+.niu-colour-palette-red { background-color: #D50436; }
+
+/* line 337, style.sass */
+.wheel-section { transform: translateY(27%); margin-top: -5%; }
+
+@media only screen and (min-width: 768px) { /* line 342, style.sass */
+  .wheel-section.img-fluid { max-width: 70% !important; } }
+/* line 345, style.sass */
+.three-wheels { transform: translateY(33%); margin-top: -3%; }
+
+/* line 349, style.sass */
+.niu-leaflet-light-grey-black-bkg { background: #d5d5d5; background: linear-gradient(180deg, #d5d5d5 50%, black 50%); }
+
+/* line 353, style.sass */
+.niu-light-grey-bkg { background-color: #d5d5d5; }
+
+/* line 356, style.sass */
+.light-grey-divider { padding-top: 20%; padding-bottom: 20%; }
+
+/* line 360, style.sass */
+.niu-leaflet-img { transform: translate(1%, -50%); }
+
+/* line 363, style.sass */
+.niu-website-mockup { height: 500px; background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/niu-website-laptop-mockup.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; }
+
+/*AMWORLD */
+/* line 373, style.sass */
+.amworld-colour-palette-wrapper > .row > div { aspect-ratio: 1; }
+
+/* line 376, style.sass */
+.amworld-colour-palette-magenta { background-color: #B33E68; }
+
+/* line 379, style.sass */
+.amworld-colour-palette-navy { background-color: #2B334E; }
+
+/* line 382, style.sass */
+.amworld-colour-palette-light-blue { background-color: #7E99CE; }
+
+/* line 385, style.sass */
+.amworld-colour-palette-purple { background-color: #794682; }
+
+/* line 388, style.sass */
+.amworld-navigator { height: 720px; background-image: url(https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-navigator-wide.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; }
+
+/* line 396, style.sass */
+.amworld-icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 2rem; height: 360px; place-content: space-between; }
+
+/* line 403, style.sass */
+.amworld-icon > img { height: 41px; width: 100%; }
+
+/* line 407, style.sass */
+.app-features-grid > div > ul { list-style-type: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, max(384px, 100% / 2)), 1fr)); grid-auto-rows: 1fr; gap: 0; }
+/* line 414, style.sass */
+.app-features-grid > div > ul > li { min-height: 500px; }
+
+/* line 417, style.sass */
+.amworld-loading-image { background-image: linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), linear-gradient(rgba(179, 62, 104, 0.3), rgba(179, 62, 104, 0.3)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-loading.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; background-blend-mode: color, normal; }
+
+/* line 424, style.sass */
+.amworld-loading-text { background: #b33e68; }
+
+/* line 427, style.sass */
+.amworld-mgmt-image { background-image: linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), linear-gradient(rgba(43, 51, 78, 0.4), rgba(43, 51, 78, 0.4)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-task-mgmt.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; background-blend-mode: color, normal; }
+
+/* line 434, style.sass */
+.amworld-mgmt-text { background: #2b334e; }
+
+/* line 437, style.sass */
+.amworld-scanning-image { background-image: linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), linear-gradient(rgba(126, 153, 206, 0.3), rgba(126, 153, 206, 0.3)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-scanning.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; background-blend-mode: color, normal; }
+
+/* line 444, style.sass */
+.amworld-scanning-text { background: #7e99ce; }
+
+/* line 447, style.sass */
+.amworld-POD-image { background-image: linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), linear-gradient(rgba(121, 70, 130, 0.4), rgba(121, 70, 130, 0.4)), url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/amworld-signing.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; background-blend-mode: color, normal; }
+
+/* line 454, style.sass */
+.amworld-POD-text { background: #794682; }
+
+/*AETHER */
+/* line 459, style.sass */
+.aether-colour-palette-wrapper > .row > div { aspect-ratio: 1; }
+
+/* line 462, style.sass */
+.aether-colour-palette-lilac { background-color: #958497; }
+
+/* line 465, style.sass */
+.aether-colour-palette-yellow { background-color: #f8cd1d; }
+
+/* line 468, style.sass */
+.aether-colour-palette-green { background-color: #90b3a7; }
+
+/* line 471, style.sass */
+.aether-colour-palette-grey { background-color: #8e9193; }
+
+/* line 474, style.sass */
+.aether-colour-palette-orange { background-color: #e7882b; }
+
+/* line 477, style.sass */
+.aether-colour-palette-blue { background-color: #8ea4b8; }
+
+/* line 480, style.sass */
+.shadow-effect { box-shadow: 8px 8px 16px #dddddd; }
+
+/*LOGOS */
+/* line 485, style.sass */
+.qronologer { background-color: #f8b133; }
+
+/* line 488, style.sass */
+.aether { background-color: #575756; }
+
+/* line 491, style.sass */
+.idrico { background-color: black; }
+
+/* line 494, style.sass */
+.rimdrim { background-color: #de902f; }
+
+/*ABOUT */
+/* line 499, style.sass */
+#about { background-image: url("https://emmekkappa.github.io/MikaelImperatoriFesta/img/hero-background.svg"); background-blend-mode: multiply; background-color: #410099; background-repeat: no-repeat; background-attachment: fixed; background-position: right bottom; background-size: 70%; }
+
+/* line 508, style.sass */
+.lead { line-height: 1.75; }
+
+/* line 511, style.sass */
+.get-in-touch { color: #31006f; }
+
+/* line 514, style.sass */
+.get-in-touch-icon > a > img { height: 36px; width: 36px; }
+
+/*# sourceMappingURL=style.css.map */
