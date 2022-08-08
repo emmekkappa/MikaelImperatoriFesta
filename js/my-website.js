@@ -97,7 +97,7 @@ $(function () {
 
 var stickyOffset = $('#MyNav').offset();
 var $contentDivs = $('section');
-$(document).scroll(function() {
+$("main").scroll(function() {
     $contentDivs.each(function(k) {
         var _thisOffset = $(this).offset();
         var _actPosition = _thisOffset.top - $(window).scrollTop();
