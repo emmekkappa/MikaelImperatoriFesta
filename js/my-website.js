@@ -55,7 +55,7 @@ $('.slider-icon').slick({
 });
 
 // Scrollify applied to homepage only through classes
-$(function () {
+/*$(function () {
 	$.scrollify({
 		section: ".homepage"
 	});
@@ -63,37 +63,19 @@ $(function () {
 $(function () {
 
 	$.scrollify({
-		// section should be an identifier that is the same for each section
-		// A selector for the sections.
 		section: ".homepage",
-		// Scrollify lets you define a hash value for each section.
-		// This makes it possible to permalink to particular sections.
-		// This is set as a data attribute on the sections.
-		// The name of the data attribute is defined by 'sectionName'.
 		sectionName: "section-name",
-		// A CSS selector for non-full-height sections, such as a header and footer.
 		interstitialSection: "",
-		// Define the easing method.
 		easing: "easeOutExpo",
-		// Scrolling speed in milliseonds
 		scrollSpeed: 1100,
-		// A distance in pixels to offset each sections position by.
 		offset: 0,
-		// A boolean to define whether scroll bars are visible or not.
 		scrollbars: true,
-		// Target container
 		target: "html,body",
-		// A string of selectors for elements that require standard scrolling behaviour.
 		standardScrollElements: false,
-		// A boolean to define whether Scollify assigns a height to the sections.
 		setHeights: true,
-		// Allows scrolling over overflowing content within sections
 		overflowScroll: true,
-		// Updates the browser location hash when scrolling through sections
 		updateHash: true,
-		// Allows to handle touch scroll events
 		touchScroll: true,
-		// callbacks
 		before: function () {},
 		after: function () {},
 		afterResize: function () {},
@@ -104,29 +86,44 @@ $(function () {
 
 $('.link').click(function () {
 	$.scrollify.move($(this).attr('href'))
-});
+});*/
 
+// Tooltip activation
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 });
 
 // Change nav bar colour 
 
-var stickyOffset = $('#MyNav').offset();
-var $contentDivs = $('section');
-$(document).scroll(function() {
-    $contentDivs.each(function(k) {
-        var _thisOffset = $(this).offset();
-        var _actPosition = _thisOffset.top - $(window).scrollTop();
-        if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
-            $("#MyNav").removeClass("light dark").addClass($(this).hasClass("light") ? "light" : "dark");
-            return false;
-        }
-    });
+const isScrollSnapActive = $('main').hasClass('work'); // controlliamo se siamo dentro una pagina con lo scrollSnap
+const $scrollElement = $(isScrollSnapActive ? 'main' : window); // se scrollSnap ascoltiamo main, altrimenti window
+
+const stickyOffset = $('#MyNav').offset(); // prendo l'offset della nav {top, left, bottom right}
+const $contentDivs = $('section'); // query selector per tutte le sezioni
+
+updateNavbarColor(); // al caricamento, quando questa linea viene letta, eseguiamo pure la funzione
+$scrollElement.scroll(updateNavbarColor); // allo scroll eseguiamo la funzione
+
+function updateNavbarColor() { // qui eseguo la funzione solo quando c'è uno scroll dentro main
+$contentDivs.each(function(k) {
+const _thisOffset = $(this).offset();
+const _actPosition = _thisOffset.top - $(window).scrollTop();
+if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
+const isLightSection = $(this).hasClass("light");
+
+$("#MyNav")
+.removeClass("light dark")
+.addClass(isLightSection ? "light" : "dark");
+
+return false;
+}
 });
+}
+
 
 // Smooth scroll
 
+/*
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -136,6 +133,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+*/
 
 // Sliding underline nav
 
